@@ -1,39 +1,39 @@
 # Print "Hello world"
-q1 ← "Hello world"
+e1 ← "Hello world"
 # q1
 
 # Greet based on inputted name
-Q2 ← "Hello "⊸∾
-# Q2 "James"
+E2 ← "Hello "⊸∾
+# E2 "James"
 
 # Only greet if inputted name is "Alice" or "Bob"
-Q3 ← { ∨´𝕩⊸≡¨"Alice"‿"Bob" ? "Hello "∾𝕩 ; @ }
-# Q3 "James"
-# Q3 "Bob"
+E3 ← { ∨´𝕩⊸≡¨"Alice"‿"Bob" ? "Hello "∾𝕩 ; @ }
+# E3 "James"
+# E3 "Bob"
 
 # Sum 1 to n
-Q4 ← +´∘↕+⟜1
-# Q4 10
+E4 ← +´∘↕+⟜1
+# E4 10
 
 # Sum multiples of 3 or 5 between 1 and n
-Q5 ← +´((∨´0=3‿5⊸|)˘⊸/1+↕)
-# Q5 10
+E5 ← +´((∨´0=3‿5⊸|)˘⊸/1+↕)
+# E5 10
 
 # Sum or product 1 to n
-_Q6 ← { 𝔽´1+↕𝕩 }
-# +_Q6 10
-# ×_Q6 10
+_E6 ← { 𝔽´1+↕𝕩 }
+# +_E6 10
+# ×_E6 10
 
 # Multiplication table up to 12
-q7 ← ×⌜˜1+↕12
-# q7
+e7 ← ×⌜˜1+↕12
+# e7
 
 # Primes less than n
-Q8 ← ¬∘∊⟜(⥊×⌜˜)⊸/2↓↕
-# Q8 100
+E8 ← ¬∘∊⟜(⥊×⌜˜)⊸/2↓↕
+# E8 100
 
 # Number guessing game
-Q9 ← {
+E9 ← {
   n ← •rand.Range 𝕩
   done ← 0
   Guess ⇐ {
@@ -43,12 +43,16 @@ Q9 ← {
     ; 𝕩<n ? "Too low!"
   }
 }
-# game ← Q9 100
+# game ← E9 100
 # game.Guess 69
 
 # Next 20 leap yrs
-Q10 ← 
+e10 ← @
 
 # Pi approximation
-q11 ← 4×+´((¯1⋆1+⊢)÷1-˜2×⊢)1+↕1e6
-# q11
+e11 ← 4×+´((¯1⋆1+⊢)÷1-˜2×⊢)1+↕1e6
+# e11
+
+# Largest list element
+L1 ← ⌈´
+# L1 1‿4‿2‿3‿8‿5‿3
