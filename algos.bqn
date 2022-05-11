@@ -56,3 +56,11 @@ e11 ← 4×+´((¯1⋆1+⊢)÷1-˜2×⊢)1+↕1e6
 # Largest list element
 L1 ← ⌈´
 # L1 1‿4‿2‿3‿8‿5‿3
+
+# Reverse list
+L2 ← ⌽
+# L2 1‿4‿2‿3‿8‿5‿3
+
+# Check if element is in list
+L3 ← ⊑∘∊
+# 3 L3 1‿4‿2‿3‿8‿5‿3
