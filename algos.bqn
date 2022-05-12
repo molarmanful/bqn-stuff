@@ -64,3 +64,23 @@ L2 ← ⌽
 # Check if element is in list
 L3 ← ⊑∘∊
 # 3 L3 1‿4‿2‿3‿8‿5‿3
+
+# Odd-indexed elements in list
+L4 ← (2|⟜↕≠)⊸/
+# L4 1‿4‿2‿3‿8‿5‿3
+
+# Cumulative sum of list
+L5 ← +`
+# L5 1‿4‿2‿3‿8‿5‿3
+
+# Palindrome test
+L6 ← ⌽≡⊢
+# L6 "racecar"
+
+# List sum w/ recursion
+L7 ← { 0=≠𝕩 ? 0 ; (⊑+⟜𝕊1⊸↓)𝕩 }
+# L7 1‿4‿2‿3‿8‿5‿3
+
+# First 20 perfect squares
+l8 ← ×˜1+↕20
+# l8
