@@ -47,7 +47,8 @@ E9 ← {
 # game.Guess 69
 
 # Next 20 leap yrs
-e10 ← @
+e10 ← 20↑(≠˝0=400‿100‿4|⌜⊢)⊸/(4⊸|⊸+⌊1970+31536e3÷˜•UnixTime@)+4×↕21
+# e10
 
 # Pi approximation
 e11 ← 4×+´((¯1⋆1+⊢)÷1-˜2×⊢)1+↕1e6
@@ -107,3 +108,11 @@ L12 ← ⌽
 # First 100 Fibonacci numbers
 l13 ← ∾⟜(+´2↑⌽)⍟100 1‿1
 # l13
+
+# Number to digit array
+L14 ← •Fmt-'0'˙
+#L14 1234
+
+# 
+L15 ← @
+#L15 1234
