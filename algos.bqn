@@ -37,10 +37,10 @@ E9 ← {
   n ← •rand.Range 𝕩
   done ← 0
   Guess ⇐ {
-    done ? "Game already over"
-    ; 𝕩=n ? done↩1, "You guessed the number!"
-    ; 𝕩>n ? "Too high!"
-    ; 𝕩<n ? "Too low!"
+    done ? "Game already over";
+    𝕩=n ? done↩1, "You guessed the number!";
+    𝕩>n ? "Too high!";
+    𝕩<n ? "Too low!"
   }
 }
 # game ← E9 100
@@ -79,7 +79,7 @@ L6 ← ⌽≡⊢
 # L6 "racecar"
 
 # List sum w/ recursion
-L7 ← { 0=≠𝕩 ? 0 ; (⊑+⟜𝕊1⊸↓)𝕩 }
+L7 ← { 0=≠𝕩 ? 0; (⊑+⟜𝕊1⊸↓)𝕩 }
 # L7 1‿4‿2‿3‿8‿5‿3
 
 # First 20 perfect squares
@@ -97,7 +97,7 @@ L10 ← ⥊∘⍉≍
 # Merge sorted list (non-trivial solution)
 L11 ← {
   a ← ⌽⍟(⊑⍋)𝕨‿𝕩
-  0≠𝕨∧○≠𝕩 ? (⊑⊑a)∾𝕊´1↓⌾⊑a ; 𝕨∾𝕩
+  0≠𝕨∧○≠𝕩 ? (⊑⊑a)∾𝕊´1↓⌾⊑a; 𝕨∾𝕩
 }
 # 1‿4‿9 L11 2‿3‿5‿8
 
