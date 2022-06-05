@@ -140,7 +140,7 @@ _l16_ ← {
 }
 # (3 _l16_ 10) 2‿1‿0
 
-# Sort algorithms
+# Sorting algorithms
 l17 ← {
   Swap ⇐ { ⌽⌾(𝕨⊸⊏)𝕩 }
   Ins ⇐ {
@@ -183,4 +183,34 @@ l17 ← {
       } ∧⌾(i‿j⊸⊏)𝕩
   }
 }
-# l17.Sel 1‿4‿2‿3‿8‿5‿3
+# l17.Sesort 1‿4‿2‿3‿8‿5‿3
+# l17.Isort 1‿4‿2‿3‿8‿5‿3
+# l17.Msort 1‿4‿2‿3‿8‿5‿3
+# l17.Qsort 1‿4‿2‿3‿8‿5‿3
+# l17.Stsort 1‿4‿2‿3‿8‿5‿3
+
+# Binary search
+L18 ← ⍋
+# 1‿2‿5‿8‿9‿10 L18 5
+
+# Print list of strings in rectangular frame
+L19 ← {
+  m ← ⌈´≠¨𝕩
+  b ← "*"⥊˜m+4
+  •Out b
+  {•Out ∾⟨"* ", m↑𝕩, " *"⟩}¨𝕩
+  •Out b
+}
+# L19 "Hello"‿"World"‿"in"‿"a"‿"frame"
+
+# Pig Latin translator
+l20 ← {
+  Split ⇐ ' '⊸((⊢-˜+`×¬)∘=⊔⊢)
+  Join ⇐ { 𝕨∾' '∾𝕩 }´
+  IsA ⇐ { (𝕩≥'A')∧𝕩≤'Z' }
+  Cap ⇐ (-⟜32⌾⊏+⟜32⍟IsA¨)⍟(∨´IsA¨)
+  To ⇐ Join(Cap∘∾⟜"ay"1⊸⌽)¨∘Split
+  From ⇐ Join Cap∘(¯1⊸⌽¯2⊸↓)⍟("ay"⊸≡¯2⊸↑)¨∘Split
+}
+# l20.To "The quick brown fox"
+# l20.From "Hetay uickqay rownbay oxfay"
